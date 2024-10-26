@@ -17,21 +17,21 @@ def convert_currency(base):
         response.raise_for_status()  # Raise an exception if status code is 4xx or 5xx
         data = response.json()
         return data['data']
-    except requests.exceptions.RequestException as e:
-        print(f"API request failed: {e}")
-    except ValueError:
-        print("Response content is not valid JSON.")
-    except KeyError:
-        print("Expected 'data' key is missing in the JSON response.")
+    # except requests.exceptions.RequestException as e:
+    #     print(f"API request failed: {e}")
+    # except ValueError:
+    #     print("Response content is not valid JSON.")
+    # except KeyError:
+    #     print("Expected 'data' key is missing in the JSON response.")
     # try:
     #     response = requests.get(url)
     #     data = response.json()
     #     print(data)
     #     # print(data) because the json body has the currencies inside the data array
     #     return data['data']
-    # except:
-    #     print(f"Invalid input")
-    #     return None
+    except:
+        print(f"Invalid input")
+        return None
 
 def format_data(data):
     # print(data.items())
