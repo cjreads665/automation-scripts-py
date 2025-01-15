@@ -172,3 +172,4 @@ cython_debug/
 
 #json objects
 test.json
+clipboard.json
